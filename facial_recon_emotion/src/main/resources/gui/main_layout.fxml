@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.FacialEmotionRecon.gui.MainController">
+    <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="10" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <Button fx:id="uploadButton" prefHeight="24.0" prefWidth="140.0" text="Upload de Imagem" />
+      <Button fx:id="startWebcamButton" mnemonicParsing="false" text="WebCam" />
+        <HBox alignment="CENTER" spacing="10">
+            <VBox alignment="CENTER" spacing="5">
+                <Label text="Imagem Original" />
+                <ImageView fx:id="originalImageView" fitHeight="300" fitWidth="300" preserveRatio="true" />
+            </VBox>
+            <VBox alignment="CENTER" spacing="5">
+                <Label text="Imagem Processada" />
+                <ImageView fx:id="processedImageView" fitHeight="300" fitWidth="300" preserveRatio="true" />
+            </VBox>
+        </HBox>
+        <ProgressBar fx:id="progressBar" prefWidth="600" visible="false" />
+        <VBox spacing="5">
+            <Label text="Resultados de Reconhecimento Facial:" />
+            <TextArea fx:id="faceRecognitionResults" editable="false" prefHeight="100" />
+            <Label text="Resultados de Detecção de Emoções:" />
+            <TextArea fx:id="emotionDetectionResults" editable="false" prefHeight="100" />
+        </VBox>
+    </VBox>
+</AnchorPane>
